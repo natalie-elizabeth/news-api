@@ -24,9 +24,12 @@
     }
   },
   "dependencies": {
+    "axios": "^0.16.1",
+    "material-ui": "^0.18.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "react-side-bar": "^0.3.5"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -43,6 +46,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^19.0.2",
     "react-addons-test-utils": "^15.5.1",
+    "react-test-renderer": "^15.5.4",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.0",

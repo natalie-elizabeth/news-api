@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render a h1 element 1`] = `
+<h1>
+  Nate News 
+</h1>
+`;
+
+exports[`Header should render an image 1`] = `
+<img
+  src="./src/images/nate-news.png"
+/>
+`;

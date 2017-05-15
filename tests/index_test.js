@@ -1,1 +1,0 @@
-import { shallow, render, mount } from 'enzyme';
