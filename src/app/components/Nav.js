@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Sources from './Sources';
 import Header from './header';
 import Latest from './NavBar';
+import Login from './Login';
 
 
 import SideBar from 'react-side-bar';
@@ -43,7 +44,7 @@ export default class Nav extends React.Component {
             navIconClassName.push('open');
         }
         const bar = (<div className='side'>
-            <Latest /></div>);
+            <Login /> <Latest /></div>);
         const topBar = (<div className='topBar'>
             <div className='left'>
                 <div
