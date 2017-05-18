@@ -28,6 +28,6 @@ export default class Login extends React.Component {
           redirectUri="https://localhost:3000"
         />
       </div>
-    )
+    );
   }
 }

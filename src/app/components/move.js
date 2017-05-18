@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
-import { BrowserRouter, NavLink, Link } from 'react-router-dom';
+import Home from './Home';
+import Sources from './Sources';
 
-
-function Move() {
-  return (
-    < div >
-      <ul className='nav'>
-        <li>
-          <BrowserRouter>
-            <NavLink exact activeClassName='active' to='/'> Home </NavLink>
-          </BrowserRouter>
-        </li>
-
-      </ul>
-
-    </div >
-  );
-
+class Move extends Component {
+  render() {
+    return (
+      <div>
+        <a href={Sources}>Home </a>
+      </div>
+    );
+  }
 }
-module.exports = Move;
+
+export default Move;

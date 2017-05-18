@@ -4,20 +4,26 @@ import Home from './Home';
 import Articles from './Articles';
 import Nav from './Nav';
 import Move from './move';
+import Sources from './Sources';
 
 export default class App extends React.Component {
 
   render() {
 
     return (
-      <HashRouter>
+      <HashRouter >
         <div>
           <Move />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route path="/nav" component={Nav} />
-          <Route render={function () { return <p>Not Found</p> }} />
+          <Route path="/sources" component={Sources} />
+
+          <Route render={function () {
+            return (<p>Not Found</p>);
+          }} />
         </div>
       </HashRouter >
+
     );
   }
 }

@@ -7,6 +7,7 @@ import Articles from './Articles';
 import Container from './containe'
 import SideBar from 'react-side-bar';
 import Move from './move';
+import App from './App';
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -69,7 +70,7 @@ export default class Nav extends React.Component {
           <span /><span /><span /><span />
         </div>
       </div>
-      <div className='center'> <Login /></div>
+      <div className='center'> </div>
       <div className='right'></div>
     </div>);
 
@@ -99,6 +100,7 @@ export default class Nav extends React.Component {
             <div className='title'>
               Here's the News
               <Move />
+
             </div>
             <div className='explain'>
               {this.renderSources(this.state.sources)}
