@@ -1,20 +1,21 @@
-import React from 'react';
-import { BrowserRouter as NavLink, Link, Router } from 'react-router-dom';
+import React, { Component } from 'react';
+import { BrowserRouter, NavLink, Link } from 'react-router-dom';
 
-export default class Navigate extends React.Component {
-    render() {
-        return (
-            <div>
 
-                <ul className='nav'>
-                    <li>
-                        <NavLink exact activeClassName='active' to='/'> Home </NavLink>
-                    </li>
+function Move() {
+  return (
+    < div >
+      <ul className='nav'>
+        <li>
+          <BrowserRouter>
+            <NavLink exact activeClassName='active' to='/'> Home </NavLink>
+          </BrowserRouter>
+        </li>
 
-                </ul>
-            </div>
-        )
-    }
+      </ul>
 
+    </div >
+  );
 
 }
+module.exports = Move;

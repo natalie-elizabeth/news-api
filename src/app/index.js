@@ -8,25 +8,29 @@ import Nav from './components/Nav';
 import Navigate from './components/move';
 import Searching from './components/Search';
 import Login from './components/Login';
-
+import App from './components/App';
+import Move from './components/move';
 
 
 class Index extends React.Component {
-    render() {
-        return (
+  render() {
+    return (
 
-            <div>
-                {/*<Login />*/}
-                {/*<Searching />*/}
-                <Header />
-                {/*<Latest />*/}
-                <Nav />
-                {/*<Sources />*/}
-                {/*<Articles />*/}
+      <div>
+        <Login />
+        {/*<Searching />*/}
+        <Header />
+        {/*<Latest />*/}
+        <Nav />
+        {/*<Sources />*/}
+        {/*<Articles />*/}
+        {/*<App />*/}
+        {/*<Move />*/}
 
-            </div>
-        );
-    }
+
+      </div>
+    );
+  }
 }
 
-render(<Index />, document.getElementById('app'))
+render(<Index />, document.getElementById('app'));

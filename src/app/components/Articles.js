@@ -21,7 +21,7 @@ export default class Sources extends Component {
             })
             .catch(function (err) {
                 err;
-            })
+            });
     }
     render() {
         return (

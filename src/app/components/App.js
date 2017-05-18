@@ -1,38 +1,24 @@
-var React = require('react');
-var ReactDOM = require('react-dom')
-var Popular = require('./Popular')
-var ReactRouter = require('react-router-dom');
-var Router = ReactRouter.BrowserRouter;
-var Switch = ReactRouter.Switch;
-var Route = ReactRouter.Route;
-var Nav = require('./Nav');
-var Home = require('./Home');
-var Battle = require('./Battle');
+import React from 'react';
+import { Router, Route, HashRouter, Link } from 'react-router-dom';
+import Home from './Home';
+import Articles from './Articles';
+import Nav from './Nav';
+import Move from './move';
 
+export default class App extends React.Component {
 
+  render() {
 
-class App extends React.Component {
-    render() {
-        return (
-            <Router>
-                <div className='container'>
-                    <Nav />
-                    <Switch>
-                        <Route exact path='/' component={Home} />
-                        <Route path='/battle' component={Battle} />
-                        <Route path='/popular' component={Popular} />
-                        <Route render={function () {
-                            return <p>Not Found</p>
-
-                        }} />
-                    </Switch>
-
-                </div>
-            </Router>
-
-        );
-    }
-
-};
-module.exports = App;
+    return (
+      <HashRouter>
+        <div>
+          <Move />
+          <Route exact path="/" component={Home} />
+          <Route path="/nav" component={Nav} />
+          <Route render={function () { return <p>Not Found</p> }} />
+        </div>
+      </HashRouter >
+    );
+  }
+}
 
