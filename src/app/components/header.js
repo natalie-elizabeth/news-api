@@ -7,8 +7,8 @@ export default class App extends Component {
         return (
             <div className="headers">
 
-                <img src="./src/images/nate-news.png" />
-                {/*<Latest />*/}
+                <img className='main-logo' src="./src/images/nate-news.png" />
+                
             </div>
 
         );

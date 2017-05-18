@@ -5,7 +5,8 @@ import Sources from './Sources';
 import Header from './header';
 import Latest from './NavBar';
 import Login from './Login';
-
+import Articles from './Articles';
+import Container from './containe'
 
 import SideBar from 'react-side-bar';
 
@@ -18,8 +19,9 @@ export default class Nav extends React.Component {
             barOpened: false,
             side: 'left',
             size: 256,
-
+            sources: []
         };
+        // this.onSelect = this.bind.onSelect(this);
     }
 
     toggleBar() {
@@ -34,6 +36,26 @@ export default class Nav extends React.Component {
         this.setState({ barOpened: false });
     }
 
+    onSelect = (data) => {
+        this.setState({ sources: data });
+    }
+
+    renderSources(sources) {
+        if (sources.length > 0) {
+            return (
+
+                <ul>
+                    {sources.map(function (source, index) {
+                        return (<li key={index} className='col-md-6'><a href={source.url} target="_blank">{source.name}</a><hr /></li>)
+                    })
+                    }
+                </ul>
+
+            )
+        }
+        return "Nothing to show at the moment";
+    }
+
 
 
     render() {
@@ -44,8 +66,9 @@ export default class Nav extends React.Component {
             navIconClassName.push('open');
         }
         const bar = (<div className='side'>
-            <Login /> <Latest /></div>);
+            <Latest onInfoSelect={this.onSelect} /></div>);
         const topBar = (<div className='topBar'>
+
             <div className='left'>
                 <div
                     className={navIconClassName.join(' ')}
@@ -53,7 +76,7 @@ export default class Nav extends React.Component {
                     <span /><span /><span /><span />
                 </div>
             </div>
-            <div className='center'></div>
+            <div className='center'> <Login /></div>
             <div className='right'></div>
         </div>);
 
@@ -64,20 +87,33 @@ export default class Nav extends React.Component {
             onClose: this.onClose.bind(this),
             side: side,
             size: size,
-
         };
 
         if (topBarIncluded) {
             sideBarProps.topBar = topBar;
         }
 
-        return (
-            <SideBar {...sideBarProps}>
-                {!topBarIncluded && topBar}
-                <div className='main'>
 
-                </div>
-            </SideBar>
+        // const sources = this.state.sources.map((source, index) => {
+        //     return (<li key={index}>{source.name}</li>);
+        // });
+
+        return (
+            <div>
+                <SideBar {...sideBarProps}>
+                    {!topBarIncluded && topBar}
+                    <div className='main' style={{ marginLeft: 280 }}>
+                        <div className='title'>
+                            Here's the News
+                        </div>
+                        <div className='explain'>
+
+                            {this.renderSources(this.state.sources)}
+
+                        </div>
+                    </div>
+                </SideBar>
+            </div>
         );
     }
 }

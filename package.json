@@ -25,11 +25,15 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "babel-preset-stage-0": "^6.24.1",
     "material-ui": "^0.18.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
-    "react-side-bar": "^0.3.5"
+    "react-search": "^2.0.5",
+    "react-search-box": "0.0.6",
+    "react-side-bar": "^0.3.5",
+    "react-sidebar": "^2.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",

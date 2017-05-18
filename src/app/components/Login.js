@@ -18,14 +18,14 @@ const loading = () => {
 export default class Login extends React.Component {
     render() {
         return (
-            <div>
+            <div className="Loginbutton">
                 <GoogleLogin
                     clientId='658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com'
                     onSuccess={success}
                     onFailure={error}
                     onRequest={loading}
                     buttonText="Login"
-                    redirectUri="https://react-google-login-th3legend.c9users.io/google"
+                    redirectUri="https://localhost:3000"
                 />
             </div>
         )
