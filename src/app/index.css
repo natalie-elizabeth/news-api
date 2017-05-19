@@ -255,3 +255,7 @@ font-style:italic;
 .nav li{
 display: flex;
 }
+
+.a{
+margin-left:10px;
+}

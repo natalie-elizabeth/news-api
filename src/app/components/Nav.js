@@ -8,6 +8,7 @@ import Container from './containe'
 import SideBar from 'react-side-bar';
 import Move from './move';
 import App from './App';
+import Home from './Home';
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -98,8 +99,13 @@ export default class Nav extends React.Component {
           {!topBarIncluded && topBar}
           <div className='main' style={{ marginLeft: 280 }}>
             <div className='title'>
-              Here's the News
-              <Move />
+
+              <div className='list'>
+                <a href='/index' src={Home}> Home </a>
+                <a href='/index' src={Home}> Popular </a>
+              </div>
+
+
 
             </div>
             <div className='explain'>

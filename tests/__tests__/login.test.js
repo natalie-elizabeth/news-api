@@ -8,8 +8,10 @@ describe('Login', () => {
 
     // expect(wrapper.find('img').node).toBeDefined();
     it('should render a button', () => {
-      const wrapper_ = shallow();
-      expect(wrapper_).toMatchSnapshot();
+      const wrapper = shallow(<GoogleLogin/>);
+      expect(wrapper.find(''))
+      expect(wrapper).toMatchSnapshot();
+      expect(wrapper.props().data).toBe('something');
     });
   });
 

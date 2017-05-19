@@ -3,5 +3,5 @@ sudo: true
 node_js:
   - "6"
 
-script: 
-  - npm test
+script:
+  -yarn start:dev:server

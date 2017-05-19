@@ -6,7 +6,7 @@ module.exports = {
 
     return Axios.get(encodedURI)
       .then(function (response) {
-        console.log('hey', response)
+        console.log('hey', response);
         return response.data.sources;
       });
   }
