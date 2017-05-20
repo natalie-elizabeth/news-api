@@ -1,14 +1,12 @@
 import React from 'react';
-import Sources from './Sources';
 import Header from './header';
-import Latest from './NavBar';
+import NavBar from './NavBar';
 import Login from './Login';
 import Articles from './Articles';
-import Container from './containe'
 import SideBar from 'react-side-bar';
-import Move from './move';
-import App from './App';
 import Home from './Home';
+import Search from './Search';
+import Axios from 'axios';
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -18,9 +16,15 @@ export default class Nav extends React.Component {
       barOpened: false,
       side: 'left',
       size: 256,
-      sources: []
+      sources: [],
+      source_id: 'abc-news-au',
+      articles: [],
+      loading: true
     };
     // this.onSelect = this.bind.onSelect(this);
+    this.showArticles= this.showArticles.bind(this);
+    this.renderSources = this.renderSources.bind(this);
+    this.displayArticles= this.displayArticles.bind(this);
   }
 
   toggleBar() {
@@ -39,12 +43,40 @@ export default class Nav extends React.Component {
     this.setState({ sources: data });
   }
 
-  renderSources(sources) {
+  componentDidMount(){
+    this.displayArticles(this.state.source_id);
+  }
+
+displayArticles(source_id, sort_by) {
+    this.setState({
+          loading: true
+    });
+    let EncodedURI = `https://newsapi.org/v1/articles?source=${source_id}&sortBy=${sort_by ? sort_by: ''}&apiKey=6f8522124f564510a240b1ff5bf1f975`;
+    // .replace('source_id', this.props.params.source_id)
+    // .replace('sort_by', this.props.params.sort_by)
+    Axios.get(EncodedURI)
+      .then((result) => {
+        this.setState({
+          loading: false,
+          articles: result.data.articles
+        });
+      })
+      .catch(function (err) {
+        err;
+      });
+  }
+
+  showArticles = (source_id) => {
+    this.setState({ source_id })
+    this.displayArticles(source_id)
+  }
+
+  renderSources = (sources) => {
     if (sources.length > 0) {
       return (
         <ul >
-          {sources.map(function (source, index) {
-            return (<li key={index} className='col-md-3'><a href={source.url} target="blank">{source.name}</a><hr /></li>)
+          {sources.map((source, index) => {
+            return (<li key={index} className='sizing' onClick={() => this.showArticles(source.id)}>{source.name}</li>)
           })
           }
         </ul>
@@ -60,8 +92,9 @@ export default class Nav extends React.Component {
     if (barOpened) {
       navIconClassName.push('open');
     }
+<Login />
     const bar = (<div className='side'>
-      <Latest onInfoSelect={this.onSelect} /></div>);
+      <NavBar onInfoSelect={this.onSelect} /></div>);
     const topBar = (<div className='topBar'>
 
       <div className='left'>
@@ -71,8 +104,8 @@ export default class Nav extends React.Component {
           <span /><span /><span /><span />
         </div>
       </div>
-      <div className='center'> </div>
-      <div className='right'></div>
+      <div className='center'></div>
+      <div className='right'><div className="searchbutton"><Search/></div></div>
     </div>);
 
     const sideBarProps = {
@@ -97,20 +130,18 @@ export default class Nav extends React.Component {
       <div>
         <SideBar {...sideBarProps}>
           {!topBarIncluded && topBar}
-          <div className='main' style={{ marginLeft: 280 }}>
-            <div className='title'>
-
+          <div className='main'>
+            {/*<div className='title'>
               <div className='list'>
-                <a href='/index' src={Home}> Home </a>
-                <a href='/index' src={Home}> Popular </a>
+
               </div>
 
-
-
-            </div>
-            <div className='explain'>
+            </div>*/}
+            <div className='explain col-lg-3'>
               {this.renderSources(this.state.sources)}
-
+            </div>
+            <div className='col-lg-9'>
+              {this.state.loading ? "Loading Articles .....": <Articles articles={this.state.articles} /> }
             </div>
           </div>
         </SideBar>

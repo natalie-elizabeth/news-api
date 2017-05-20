@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 import api, { fetchSources } from '../utils/api';
-import Container from './containe';
+
+
 
 class SelectedTab extends React.Component {
   render() {
@@ -33,7 +34,7 @@ SelectedTab.propTypes = {
   onInfoSelect: PropTypes.func.isRequired,
 };
 
-class Latest extends React.Component {
+class NavBar extends React.Component {
   // in order to add state to the categories
   // this.state makes Home the default
   constructor(props) {
@@ -82,4 +83,4 @@ class Latest extends React.Component {
     );
   }
 }
-module.exports = Latest;
+module.exports = NavBar;

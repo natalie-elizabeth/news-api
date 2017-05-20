@@ -5,17 +5,21 @@ import Login from '../../src/app/components/Login';
 describe('Login', () => {
   it('should display log in button', () => {
     // const renderedComponent = shallow(<Button></Button>);
+    const wrapper = shallow(<GoogleLogin />);
+    expect(wrapper.find('GoogleLogin').node).toBeDefined();
+
 
     // expect(wrapper.find('img').node).toBeDefined();
-    it('should render a button', () => {
-      const wrapper = shallow(<GoogleLogin/>);
-      expect(wrapper.find(''))
-      expect(wrapper).toMatchSnapshot();
-      expect(wrapper.props().data).toBe('something');
-    });
+    // it('should render a button', () => {
+    //   const wrapper = shallow(<GoogleLogin />);
+    //   expect(wrapper.find(''));
+    //   expect(wrapper).toMatchSnapshot();
+    //   expect(wrapper.props().data).toBe('something');
+    // });
+    // });
+
+
   });
-
-
 });
 
 // describe('HomePage', () => {

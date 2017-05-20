@@ -138,11 +138,11 @@ input[type='number'] {
 }
 
 #example {
-  height: 100vh;
+  height: 150vh;
 }
 
 #example > div {
-  height: 100vh;
+  height: 150vh;
 }
 
 .side-bar-content, .side-bar-panel, .side-bar {
@@ -150,7 +150,7 @@ input[type='number'] {
 }
 
 .topBar {
-  background-color: #3359df;
+  background-color: black;
   color: white;
   display: flex;
   height: 50px;
@@ -172,13 +172,13 @@ input[type='number'] {
 
 .side {
   background-color: #DADFE3;
-  height: 100vh;
+  height: auto;
   padding: 10px;
 }
 
 .main {
   background-color: lightgray;
-  /*height: 150vh;*/
+  height: auto;
   overflow-y: auto;
   padding: 10px;
 }
@@ -235,10 +235,13 @@ li{
   width: 100%;
   display: absolute;
 }
-.col-md-3{
+.col-md-9{
 font-size: 16px;
 font-style:italic;
 
+}
+.sizing{
+font-size:12px;
 }
 .Loginbutton{
   /*float: right;*/
@@ -258,4 +261,20 @@ display: flex;
 
 .a{
 margin-left:10px;
+}
+.searchbox{
+margin-left:-150px;
+position:;
+
+
+}
+.searchbutton{
+position:fixed;
+margin-top: -5px
+}
+.search{
+margin-left:-150px;
+}
+.vertical{
+border-left: thick solid #ff0000;
 }
