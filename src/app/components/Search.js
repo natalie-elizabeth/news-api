@@ -1,13 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import axios from 'axios';
+import Axios from 'axios';
 
 export default class Search extends React.Component {
   constructor() {
     super();
     this.state = {
       sources: [],
-      search: 'Nate'
+      search: ''
     };
   }
   updateSearch(event) {
@@ -16,7 +15,7 @@ export default class Search extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://newsapi.org/v1/sources?language=en`)
+    Axios.get(`https://newsapi.org/v1/sources`)
       .then((result) => {
         this.setState({
           sources: result.data.sources
@@ -32,10 +31,11 @@ export default class Search extends React.Component {
       });
 
     return (
-      <div className="col-md-2" id="serch">
+      <div className="col-md-2" id="search">
 
-        <input type="text" placeholder='Source Name' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{ color: 'grey'
-        }}className="searchbox" />
+        <input type="text" placeholder='Source Name' value={this.state.search} onChange={this.updateSearch.bind(this)} style={{
+          color: 'grey'
+        }} className="searchbox" />
 
         {found.map((sources) => {
 

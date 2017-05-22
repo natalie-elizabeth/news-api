@@ -1,10 +1,8 @@
 import React from 'react';
 import Header from './header';
 import NavBar from './NavBar';
-import Login from './Login';
 import Articles from './Articles';
 import SideBar from 'react-side-bar';
-import Home from './Home';
 import Search from './Search';
 import Axios from 'axios';
 
@@ -22,9 +20,9 @@ export default class Nav extends React.Component {
       loading: true
     };
     // this.onSelect = this.bind.onSelect(this);
-    this.showArticles= this.showArticles.bind(this);
+    this.showArticles = this.showArticles.bind(this);
     this.renderSources = this.renderSources.bind(this);
-    this.displayArticles= this.displayArticles.bind(this);
+    this.displayArticles = this.displayArticles.bind(this);
   }
 
   toggleBar() {
@@ -43,15 +41,15 @@ export default class Nav extends React.Component {
     this.setState({ sources: data });
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.displayArticles(this.state.source_id);
   }
 
-displayArticles(source_id, sort_by) {
+  displayArticles(source_id, sort_by) {
     this.setState({
-          loading: true
+      loading: true
     });
-    let EncodedURI = `https://newsapi.org/v1/articles?source=${source_id}&sortBy=${sort_by ? sort_by: ''}&apiKey=6f8522124f564510a240b1ff5bf1f975`;
+    let EncodedURI = `https://newsapi.org/v1/articles?source=${source_id}&sortBy=${sort_by ? sort_by : ''}&apiKey=6f8522124f564510a240b1ff5bf1f975`;
     // .replace('source_id', this.props.params.source_id)
     // .replace('sort_by', this.props.params.sort_by)
     Axios.get(EncodedURI)
@@ -92,7 +90,6 @@ displayArticles(source_id, sort_by) {
     if (barOpened) {
       navIconClassName.push('open');
     }
-<Login />
     const bar = (<div className='side'>
       <NavBar onInfoSelect={this.onSelect} /></div>);
     const topBar = (<div className='topBar'>
@@ -105,7 +102,7 @@ displayArticles(source_id, sort_by) {
         </div>
       </div>
       <div className='center'></div>
-      <div className='right'><div className="searchbutton"><Search/></div></div>
+      <div className='right'></div>
     </div>);
 
     const sideBarProps = {
@@ -127,7 +124,7 @@ displayArticles(source_id, sort_by) {
     // });
 
     return (
-      <div>
+      <div className="sideBar">
         <SideBar {...sideBarProps}>
           {!topBarIncluded && topBar}
           <div className='main'>
@@ -141,7 +138,7 @@ displayArticles(source_id, sort_by) {
               {this.renderSources(this.state.sources)}
             </div>
             <div className='col-lg-9'>
-              {this.state.loading ? "Loading Articles .....": <Articles articles={this.state.articles} /> }
+              {this.state.loading ? "Loading Articles ....." : <Articles articles={this.state.articles} />}
             </div>
           </div>
         </SideBar>

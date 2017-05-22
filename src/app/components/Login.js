@@ -15,19 +15,18 @@ const error = (response) => {
 const loading = () => {
   console.log('loading');
 };
-export default class Login extends React.Component {
-  render() {
-    return (
-      <div className="Loginbutton">
-        <GoogleLogin
-          clientId='658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com'
-          onSuccess={success}
-          onFailure={error}
-          onRequest={loading}
-          buttonText="Login using google+"
-          redirectUri="https://localhost:3000"
-        />
-      </div>
-    );
-  }
+function Login() {
+  return (
+    <div className="Loginbutton">
+      <GoogleLogin
+        clientId='658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com'
+        onSuccess={success}
+        onFailure={error}
+        onRequest={loading}
+        buttonText="Login using google+"
+        redirectUri="https://localhost:3000"
+      />
+    </div>
+  );
 }
+module.exports = Login;

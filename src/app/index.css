@@ -231,9 +231,10 @@ li{
 .latest{
   font-family: Roboto;
 }
-.article-list{
+.article-list {
   width: 100%;
   display: absolute;
+
 }
 .col-md-9{
 font-size: 16px;
@@ -241,7 +242,10 @@ font-style:italic;
 
 }
 .sizing{
-font-size:12px;
+font-size:14px;
+color: black;
+font-style:bold;
+cursor: pointer;
 }
 .Loginbutton{
   /*float: right;*/

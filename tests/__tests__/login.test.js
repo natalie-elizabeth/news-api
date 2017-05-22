@@ -3,57 +3,19 @@ import React from 'react';
 import Login from '../../src/app/components/Login';
 
 describe('Login', () => {
-  it('should display log in button', () => {
-    // const renderedComponent = shallow(<Button></Button>);
-    const wrapper = shallow(<GoogleLogin />);
-    expect(wrapper.find('GoogleLogin').node).toBeDefined();
-
-
-    // expect(wrapper.find('img').node).toBeDefined();
-    // it('should render a button', () => {
-    //   const wrapper = shallow(<GoogleLogin />);
-    //   expect(wrapper.find(''));
-    //   expect(wrapper).toMatchSnapshot();
-    //   expect(wrapper.props().data).toBe('something');
-    // });
-    // });
-
-
+  it('check for presence of div elements', () => {
+    const wrapper = shallow(<div></div>);
+    expect(wrapper.find('div').node).toBeDefined();
   });
+  it('render 1 <Login/> component', () => {
+    const wrapper = shallow(<Login />);
+    console.log(wrapper.props());
+    expect(wrapper).toHaveLength(1);
+  });
+  it('renders props correctly', () => {
+    const wrapper = shallow(<Login name="Login" />);
+    console.log(wrapper.instance().props);
+    expect(wrapper.instance().props.name).toBe('Login');
+  });
+
 });
-
-// describe('HomePage', () => {
-//   it('should display log in button', () => {
-//     const wrapper = shallow(<button></button>);
-//     expect(wrapper.find('button').node).toBeDefined();
-//   });
-
-//   it('should display log in text', () => {
-//     const text = 'LogIn Using Google+';
-//     const renderedText = shallow(<button>{text}</button>)
-//     expect(renderedText.contains(text)).toEqual(true);
-//   });
-
-//   it('should display a welcome text', () => {
-//     const wrapper = shallow(<h1></h1>);
-//     expect(wrapper.find('h1').node).toBeDefined();
-//   });
-// });
-
-
-// it('should displays search and log in buttons', () => {
-//     const renderedComponent = shallow(<Button></Button>);
-//     expect(renderedComponent.find("button").node).toBeDefined();
-// });
-// it('should dispay search and log in texts in the buttons', () => {
-//     const text = 'LOG IN';
-//     const text1 = 'SEARCH';
-//     const renderedComponent = shallow(<Button>{'LOG IN'}</Button>, <Button>{'SEARCH'}</Button>)
-//     expect(renderedComponent.contains(text)).toEqual(true);
-// });
-// it('handles click', () => {
-//     const onClickSpy = jest.fn();
-//     const renderedComponent = shallow(<Button onClick={onClickSpy} />);
-//     renderedComponent.find('button').simulate('click');
-//     expect(onClickSpy).toHaveBeenCalled();
-// });
