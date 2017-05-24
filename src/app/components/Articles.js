@@ -11,12 +11,12 @@ export default class Articles extends Component {
 
   render() {
     return (
-      < div >
+      < div className="articles">
         {
           this.props.articles.map((article, index) => {
             return (<div key={index} className="article-list">
               <hr style={{ color: "black" }} />
-              <img src={article.urlToImage} style={{ height: "200px", width: "200px" }} /> <br />
+              <img src={article.urlToImage} className="img-thumbnail" style={{ width: "304px", height: "236px" }} /> <br />
               <a href={article.url} style={{ fontSize: "16px" }}>{article.title}</a><br />
               <div className="description" style={{ fontStyle: "italic" }}>{article.description}</div>
 

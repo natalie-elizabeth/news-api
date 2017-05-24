@@ -15,6 +15,17 @@ describe('Header', () => {
     const wrapper = shallow(<img />);
     expect(wrapper.containsMatchingElement(<img src='./src/images/title.jpg' style={{ width: '1140px', height: '200px' }} />));
   });
+  it('should render image in the divs', () => {
+    const wrapper = shallow(<Header />);
+    expect(wrapper.containsMatchingElement(
+      <div className="headers">
+        <img className='main-logo' src="./src/images/titlelogo.jpg" />
+      </div>
+    ));
+  });
 
 });
+
+
+
 

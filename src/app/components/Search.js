@@ -6,7 +6,7 @@ export default class Search extends React.Component {
     super();
     this.state = {
       sources: [],
-      search: ''
+      search: 'Search'
     };
   }
   updateSearch(event) {

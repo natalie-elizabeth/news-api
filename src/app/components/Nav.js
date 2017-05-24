@@ -5,6 +5,20 @@ import Articles from './Articles';
 import SideBar from 'react-side-bar';
 import Search from './Search';
 import Axios from 'axios';
+import Filters from './filter';
+
+const FILTERS = {
+  country: {
+    au: 'au',
+    de: 'de',
+    us: 'us'
+  },
+  language: {
+    en: 'en',
+    de: 'de',
+    fr: 'fr'
+  }
+};
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -17,12 +31,19 @@ export default class Nav extends React.Component {
       sources: [],
       source_id: 'abc-news-au',
       articles: [],
-      loading: true
+      loading: true,
+      currentFilter: {
+        filterKey: 'language',
+        filterValue: 'en',
+      },
+      filters: FILTERS
     };
+
     // this.onSelect = this.bind.onSelect(this);
     this.showArticles = this.showArticles.bind(this);
     this.renderSources = this.renderSources.bind(this);
     this.displayArticles = this.displayArticles.bind(this);
+    // this.handleFilterChange = this.handleFilterChange.bind(this);
   }
 
   toggleBar() {
@@ -50,8 +71,6 @@ export default class Nav extends React.Component {
       loading: true
     });
     let EncodedURI = `https://newsapi.org/v1/articles?source=${source_id}&sortBy=${sort_by ? sort_by : ''}&apiKey=6f8522124f564510a240b1ff5bf1f975`;
-    // .replace('source_id', this.props.params.source_id)
-    // .replace('sort_by', this.props.params.sort_by)
     Axios.get(EncodedURI)
       .then((result) => {
         this.setState({
@@ -128,17 +147,19 @@ export default class Nav extends React.Component {
         <SideBar {...sideBarProps}>
           {!topBarIncluded && topBar}
           <div className='main'>
-            {/*<div className='title'>
-              <div className='list'>
+            <div className='title'>
 
-              </div>
 
-            </div>*/}
-            <div className='explain col-lg-3'>
+            </div>
+            <div className='explain col-lg-3' style={{ fontWeight: "bold" }}>
               {this.renderSources(this.state.sources)}
             </div>
-            <div className='col-lg-9'>
+            <div className='col-lg-6'>
               {this.state.loading ? "Loading Articles ....." : <Articles articles={this.state.articles} />}
+            </div>
+            <div className='col-lg-3'>
+
+              <Filters />
             </div>
           </div>
         </SideBar>

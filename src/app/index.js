@@ -5,6 +5,7 @@ require('./index.css');
 import Nav from './components/Nav';
 import Login from './components/Login';
 
+
 class Index extends React.Component {
   render() {
     return (
@@ -14,6 +15,7 @@ class Index extends React.Component {
         <hr />
         <Header />
         <Nav />
+
 
       </div>
     );

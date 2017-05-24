@@ -31,7 +31,6 @@ class SelectedTab extends React.Component {
 SelectedTab.propTypes = {
   selectedCategory: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
-  onInfoSelect: PropTypes.func.isRequired,
 };
 
 class NavBar extends React.Component {

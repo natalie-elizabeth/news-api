@@ -7,30 +7,22 @@ describe('Nav', () => {
     const wrapper = shallow(<div></div>);
     expect(wrapper.find('div').node).toBeDefined();
   });
-  /*it('div stuff', () => {
-    const wrapper = shallow(
+  it('should check if sidebar is being rendered', () => {
+    const wrapper = shallow(<Nav />);
+    expect(wrapper.containsMatchingElement(
       <div className="sideBar">
-
-
-      </div>);
-expect(wrapper.containsAllMatchingElements([
-
-]))*/
-
+        <div className='main'>
+          <div className='title'>
+          </div>
+          <div className='explain col-lg-3' style={{ fontWeight: "bold" }}></div>
+          <div className='col-lg-6'> </div>
+          <div className='col-lg-3'></div>
+        </div>
+      </div>
+    ));
+  });
+  it('should display Articles', () => {
+    let mockDisplay = jest.fn();
+    const wrapper = mount(<Nav displayArticles={mockDisplay} />);
+  });
 });
-
-
-
-
-/*const wrapper = shallow(
-  <div>
-    <span className="foo">Hello</span>
-    <div style={{ fontSize: 13 }}>Goodbye</div>
-    <span>Again</span>
-  </div>
-);
-
-expect(wrapper.containsAllMatchingElements([
-  <span>Hello</span>,
-  <div>Goodbye</div>,
-])).to.equal(true);*/

@@ -7,4 +7,12 @@ describe('Articles', () => {
     const wrapper = shallow(<div></div>);
     expect(wrapper.find('div').node).toBeDefined();
   });
+  /*it('should render articles in the divs', () => {
+    const wrapper = shallow(<Articles />);
+    expect(wrapper.containsMatchingElement(
+      <div className="articles">
+
+      </div>
+    ));
+  });*/
 });
