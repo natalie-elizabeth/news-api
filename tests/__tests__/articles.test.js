@@ -15,4 +15,16 @@ describe('Articles', () => {
       </div>
     ));
   });*/
+  // it('asserts that articles initial state is an empty array', () => {
+  //   const wrapper = shallow(<Articles />);
+  //   expect(wrapper.state().articles).toEqual([]);
+  // });
+  it('should check if articles are being rendered', () => {
+    const wrapper = shallow(<Articles />);
+    expect(wrapper.containsMatchingElement(
+      <div >
+      </div>
+    ));
+  });
+
 });

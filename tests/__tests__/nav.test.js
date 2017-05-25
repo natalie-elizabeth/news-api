@@ -21,8 +21,28 @@ describe('Nav', () => {
       </div>
     ));
   });
-  it('should display Articles', () => {
-    let mockDisplay = jest.fn();
-    const wrapper = mount(<Nav displayArticles={mockDisplay} />);
+  // tests if the componentWillMount takes up content
+  it('calls `componentWillMount` before rendering', () => {
+    const wrapper = jest.fn();
+    Nav.prototype.componentWillMount = wrapper;
+    mount(<Nav />);
+
+    expect(wrapper).toBeCalled();
+  });
+
+  // the two ensure that sources and articles initial state is an empty array
+  it('asserts that sources initial state is an empty array', () => {
+    const wrapper = shallow(<Nav />);
+    expect(wrapper.state().sources).toEqual([]);
+  });
+  it('asserts that articles initial state is an empty array', () => {
+    const wrapper = shallow(<Nav />);
+    expect(wrapper.state().articles).toEqual([]);
+  });
+
+  it('asserts that on setState sources state will have content', () => {
+    const wrapper = shallow(<Nav />);
+    wrapper.setState({ articles: [{ urlToImage: 'nat', title: 'nat', description: 'nat' }] });
+    expect(wrapper.state().articles.length).toBeGreaterThan(0);
   });
 });

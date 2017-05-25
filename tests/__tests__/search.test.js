@@ -14,25 +14,18 @@ describe('Search', () => {
     const tree = shallowToJSON(wrapper);
     expect(tree).toMatchSnapshot();
   });
-  //   it ('should display text in the button', () => {
-  //     const wrapper = shallow(<)
-  // const text = 'Search';
+  it('should check if Search select is being rendered', () => {
+    const wrapper = shallow(<Search />);
+    expect(wrapper.containsMatchingElement(
+      <div className="col-md-2" id="search">
+      </div>
+    ));
+  });
+  it('should display sources on search', () => {
+    let mockSearch = jest.fn();
+    const wrapper = mount(<Search showSources={mockSearch} />);
+  });
 });
 
 
 
-//   // it('should display search button', () => {
-//   //     const renderedComponent = shallow(<searchbox />);
-//   //     expect(renderedComponent.find("search").node).toBeDefined();
-//   // });
-
-//   it('should display search text in the button', () => {
-//     const text = 'Search';
-//     const renderedComponent = shallow(<div>{'Search'}</div>);
-//     expect(renderedComponent.contains(text)).toBe(true);
-//   });
-
-//   it("trigger onSearch correctly", () => {
-//     const handleSearch = jest.fn();
-//   });
-// });

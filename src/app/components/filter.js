@@ -43,15 +43,18 @@ export default class Filters extends React.Component {
     };
     this.handleFilterChange = this.handleFilterChange.bind(this);
   };
-
-  componentDidMount() {
-    Axios
-      .get('https://newsapi.org/v1/sources')
+  showSources() {
+    let sources = `https://newsapi.org/v1/sources`;
+    Axios.get(sources)
       .then(({ data }) => {
         this.setState((prevState) => ({
           sources: data
         }));
       });
+  }
+
+  componentDidMount() {
+    this.showSources();
   };
 
   handleFilterChange(event) {
@@ -68,14 +71,8 @@ export default class Filters extends React.Component {
   }
 
   render() {
-    const {
-            filters,
-      sources: { sources },
-      currentFilter: {
-                filterKey,
-        filterValue
-            }
-        } = this.state;
+    const { filters, sources: { sources },
+      currentFilter: { filterKey, filterValue } } = this.state;
 
     const sourcesToDisplay = sources.filter(source => {
       return source[filterKey] === filterValue;
@@ -114,7 +111,7 @@ export default class Filters extends React.Component {
           {sourcesToDisplay.map((source => {
             return (
               <div key={source.id}>
-                <div>
+                <div className="card-block">
                   <h4 className="card-title" style={{ fontStyle: "italic", fontFamily: "Roboto" }}>{source.name}</h4>
                 </div>
               </div>

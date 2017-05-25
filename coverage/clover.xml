@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1495624625889" clover="3.2.0">
-  <project timestamp="1495624625890" name="All files">
-    <metrics statements="99" coveredstatements="63" conditionals="14" coveredconditionals="9" methods="52" coveredmethods="23" elements="165" coveredelements="95" complexity="0" loc="99" ncloc="99" packages="3" files="9" classes="9">
+<coverage generated="1495698811098" clover="3.2.0">
+  <project timestamp="1495698811099" name="All files">
+    <metrics statements="103" coveredstatements="77" conditionals="14" coveredconditionals="9" methods="54" coveredmethods="32" elements="171" coveredelements="118" complexity="0" loc="103" ncloc="103" packages="3" files="9" classes="9">
       <package name="src.app.components">
-        <metrics statements="89" coveredstatements="56" conditionals="14" coveredconditionals="9" methods="49" coveredmethods="22"/>
+        <metrics statements="93" coveredstatements="70" conditionals="14" coveredconditionals="9" methods="51" coveredmethods="31"/>
         <file name="Articles.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Articles.js">
-          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="6" count="0" type="stmt"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
+          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
           <line num="17" count="0" type="stmt"/>
         </file>
         <file name="Login.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Login.js">
@@ -25,12 +25,12 @@
         <file name="Nav.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Nav.js">
           <metrics statements="33" coveredstatements="22" conditionals="12" coveredconditionals="7" methods="14" coveredmethods="6"/>
           <line num="10" count="1" type="stmt"/>
-          <line num="25" count="2" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
-          <line num="27" count="2" type="stmt"/>
-          <line num="43" count="2" type="stmt"/>
-          <line num="44" count="2" type="stmt"/>
-          <line num="45" count="2" type="stmt"/>
+          <line num="25" count="5" type="stmt"/>
+          <line num="26" count="5" type="stmt"/>
+          <line num="27" count="5" type="stmt"/>
+          <line num="43" count="5" type="stmt"/>
+          <line num="44" count="5" type="stmt"/>
+          <line num="45" count="5" type="stmt"/>
           <line num="50" count="0" type="stmt"/>
           <line num="54" count="0" type="stmt"/>
           <line num="58" count="0" type="stmt"/>
@@ -43,20 +43,20 @@
           <line num="82" count="1" type="stmt"/>
           <line num="87" count="0" type="stmt"/>
           <line num="88" count="0" type="stmt"/>
-          <line num="92" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="92" count="7" type="cond" truecount="1" falsecount="1"/>
           <line num="93" count="0" type="stmt"/>
           <line num="96" count="0" type="stmt"/>
-          <line num="102" count="3" type="stmt"/>
-          <line num="106" count="3" type="stmt"/>
-          <line num="107" count="3" type="stmt"/>
-          <line num="109" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="102" count="7" type="stmt"/>
+          <line num="106" count="7" type="stmt"/>
+          <line num="107" count="7" type="stmt"/>
+          <line num="109" count="7" type="cond" truecount="1" falsecount="1"/>
           <line num="110" count="0" type="stmt"/>
-          <line num="112" count="3" type="stmt"/>
-          <line num="114" count="3" type="stmt"/>
-          <line num="127" count="3" type="stmt"/>
-          <line num="136" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="112" count="7" type="stmt"/>
+          <line num="114" count="7" type="stmt"/>
+          <line num="127" count="7" type="stmt"/>
+          <line num="136" count="7" type="cond" truecount="1" falsecount="1"/>
           <line num="137" count="0" type="stmt"/>
-          <line num="145" count="3" type="stmt"/>
+          <line num="145" count="7" type="stmt"/>
         </file>
         <file name="NavBar.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/NavBar.js">
           <metrics statements="16" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="7"/>
@@ -78,36 +78,40 @@
           <line num="85" count="3" type="stmt"/>
         </file>
         <file name="Search.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Search.js">
-          <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
+          <metrics statements="11" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
           <line num="13" count="0" type="stmt"/>
-          <line num="18" count="0" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
           <line num="27" count="1" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="38" count="3" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
         </file>
         <file name="filter.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/filter.js">
-          <metrics statements="17" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="5"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="31" count="1" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
-          <line num="44" count="1" type="stmt"/>
-          <line num="48" count="1" type="stmt"/>
-          <line num="51" count="0" type="stmt"/>
-          <line num="58" count="0" type="stmt"/>
-          <line num="60" count="0" type="stmt"/>
-          <line num="61" count="0" type="stmt"/>
-          <line num="64" count="0" type="stmt"/>
+          <metrics statements="19" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="10"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="31" count="6" type="stmt"/>
+          <line num="32" count="6" type="stmt"/>
+          <line num="44" count="6" type="stmt"/>
+          <line num="47" count="3" type="stmt"/>
+          <line num="48" count="3" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="57" count="3" type="stmt"/>
+          <line num="61" count="2" type="stmt"/>
+          <line num="63" count="2" type="stmt"/>
+          <line num="64" count="2" type="stmt"/>
+          <line num="67" count="2" type="stmt"/>
+          <line num="75" count="11" type="stmt"/>
+          <line num="77" count="11" type="stmt"/>
           <line num="78" count="2" type="stmt"/>
-          <line num="80" count="2" type="stmt"/>
-          <line num="81" count="0" type="stmt"/>
-          <line num="84" count="2" type="stmt"/>
-          <line num="94" count="6" type="stmt"/>
-          <line num="107" count="6" type="stmt"/>
-          <line num="115" count="0" type="stmt"/>
+          <line num="81" count="11" type="stmt"/>
+          <line num="91" count="33" type="stmt"/>
+          <line num="104" count="39" type="stmt"/>
+          <line num="112" count="2" type="stmt"/>
         </file>
         <file name="header.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/header.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -130,10 +134,10 @@
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <file name="jestsetup.js" path="/Users/natalieelizabeth/Desktop/news-api/tests/jestsetup.js">
           <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="3" count="6" type="stmt"/>
-          <line num="4" count="6" type="stmt"/>
-          <line num="5" count="6" type="stmt"/>
-          <line num="8" count="6" type="stmt"/>
+          <line num="3" count="7" type="stmt"/>
+          <line num="4" count="7" type="stmt"/>
+          <line num="5" count="7" type="stmt"/>
+          <line num="8" count="7" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
         </file>
       </package>

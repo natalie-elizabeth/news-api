@@ -48,9 +48,5 @@ describe('Login', () => {
       </div>
     ));
   });
-  it('tests for response in console', () => {
-    jest.spyOn(console, 'log');
-    expect(console.log).toHaveBeenCalledWith('success');
-  });
 });
 

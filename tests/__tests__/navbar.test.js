@@ -12,6 +12,7 @@ describe('NavBar', () => {
     console.log(wrapper.props());
     expect(wrapper).toHaveLength(1);
   });
+  it('')
 });
 
   // describe('changeLocation', function () {

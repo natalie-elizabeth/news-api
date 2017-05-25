@@ -13,14 +13,19 @@ export default class Search extends React.Component {
     this.setState({ search: event.target.value });
 
   }
-
-  componentDidMount() {
-    Axios.get(`https://newsapi.org/v1/sources`)
+  showSources() {
+    let sources = `https://newsapi.org/v1/sources`;
+    Axios.get(sources)
       .then((result) => {
         this.setState({
           sources: result.data.sources
         });
       });
+  }
+
+  componentDidMount() {
+    this.showSources();
+
   }
 
   render() {
