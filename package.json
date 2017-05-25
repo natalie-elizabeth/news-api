@@ -11,7 +11,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "compile": "webpack"
+    "compile": "webpack",
+    "travis": "test"
   },
   "jest": {
     "setupFiles": [
