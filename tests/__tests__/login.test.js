@@ -3,7 +3,6 @@ import React from 'react';
 import Login from '../../src/app/components/Login';
 import shallowToJSON from 'enzyme-to-json';
 import ReactTestUtils from 'react-dom/test-utils';
-import GoogleLogin from 'react-google-login';
 
 const success = (response) => {
   console.log(response);
@@ -37,14 +36,6 @@ describe('Login', () => {
 
     expect(wrapper.containsMatchingElement(
       <div className="Loginbutton">
-        <GoogleLogin
-          clientId='658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com'
-          onSuccess={success}
-          onFailure={error}
-          onRequest={loading}
-          buttonText="Login using google+"
-          redirectUri="https://localhost:3000"
-        />
       </div>
     ));
   });
