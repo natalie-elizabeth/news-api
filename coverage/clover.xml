@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1495698811098" clover="3.2.0">
-  <project timestamp="1495698811099" name="All files">
-    <metrics statements="103" coveredstatements="77" conditionals="14" coveredconditionals="9" methods="54" coveredmethods="32" elements="171" coveredelements="118" complexity="0" loc="103" ncloc="103" packages="3" files="9" classes="9">
+<coverage generated="1495700703088" clover="3.2.0">
+  <project timestamp="1495700703088" name="All files">
+    <metrics statements="103" coveredstatements="74" conditionals="14" coveredconditionals="9" methods="54" coveredmethods="30" elements="171" coveredelements="113" complexity="0" loc="103" ncloc="103" packages="3" files="9" classes="9">
       <package name="src.app.components">
-        <metrics statements="93" coveredstatements="70" conditionals="14" coveredconditionals="9" methods="51" coveredmethods="31"/>
+        <metrics statements="93" coveredstatements="67" conditionals="14" coveredconditionals="9" methods="51" coveredmethods="29"/>
         <file name="Articles.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Articles.js">
-          <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
           <line num="17" count="0" type="stmt"/>
         </file>
         <file name="Login.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Login.js">
