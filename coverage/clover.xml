@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1495700703088" clover="3.2.0">
-  <project timestamp="1495700703088" name="All files">
+<coverage generated="1495703632262" clover="3.2.0">
+  <project timestamp="1495703632262" name="All files">
     <metrics statements="103" coveredstatements="74" conditionals="14" coveredconditionals="9" methods="54" coveredmethods="30" elements="171" coveredelements="113" complexity="0" loc="103" ncloc="103" packages="3" files="9" classes="9">
       <package name="src.app.components">
         <metrics statements="93" coveredstatements="67" conditionals="14" coveredconditionals="9" methods="51" coveredmethods="29"/>
@@ -13,14 +13,14 @@
         </file>
         <file name="Login.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Login.js">
           <metrics statements="8" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="19" count="3" type="stmt"/>
-          <line num="32" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="18" count="3" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
         </file>
         <file name="Nav.js" path="/Users/natalieelizabeth/Desktop/news-api/src/app/components/Nav.js">
           <metrics statements="33" coveredstatements="22" conditionals="12" coveredconditionals="7" methods="14" coveredmethods="6"/>

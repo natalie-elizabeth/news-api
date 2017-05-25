@@ -4,6 +4,7 @@ import Header from './components/header';
 require('./index.css');
 import Nav from './components/Nav';
 import Login from './components/Login';
+import GoogleLogin from 'react-google-login';
 
 
 class Index extends React.Component {

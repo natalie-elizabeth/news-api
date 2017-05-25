@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import FontAwesome from 'react-fontawesome';
 import GoogleLogin from 'react-google-login';
-// import GoogleLogin from '../dist/google-login';
+
 
 const success = (response) => {
   console.log(response);
